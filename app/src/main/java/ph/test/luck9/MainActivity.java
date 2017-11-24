@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String KING = "King";
     private static final String ACE = "Ace";
 
-    private String[] cardType = { CLUBS, DIAMOND, HEARTS, SPADES };//card suits
+    private String[] cardType = { CLUBS, DIAMOND, HEARTS, SPADES };
     private String[] cardDisplay = { "2", "3", "4", "5", "6", "7", "8", "9", "10", JACK, QUEEN, KING, ACE };
 
     private ArrayList<Card> listOfCards = new ArrayList<>();
@@ -121,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
             Card card3 = (Card)stack.pop();
             Card card4 = (Card)stack.pop();
 
+            /**
+             * card 1 and card 3 is for your opponents
+             */
             int opponentCardValue = totalNumberOfCard((getCardValueBasedOnType(card1) + getCardValueBasedOnType(card3)));
             int yourCardValue = totalNumberOfCard((getCardValueBasedOnType(card2) + getCardValueBasedOnType(card4)));
 
